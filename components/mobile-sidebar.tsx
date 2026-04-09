@@ -17,6 +17,7 @@ import {
   Thermometer,
   Shield,
   X,
+  Package,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -28,6 +29,7 @@ const navigation = [
   { name: "Patients", href: "/dashboard/patients", icon: Users },
   { name: "Vaccinations", href: "/dashboard/vaccinations", icon: FileText },
   { name: "Cold-Chain", href: "/dashboard/cold-chain", icon: Thermometer },
+  { name: "Inventory", href: "/dashboard/inventory", icon: Package },
   { name: "Schedule", href: "/dashboard/schedule", icon: Calendar },
   { name: "Session planning", href: "/dashboard/session-planning", icon: ClipboardList },
   { name: "Notifications", href: "/dashboard/notifications", icon: Bell },
