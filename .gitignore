@@ -12,6 +12,8 @@ next.user-config.*
 # Environment variables
 .env*
 
+next-env.d.ts
+
 # Common ignores
 node_modules
 .next/

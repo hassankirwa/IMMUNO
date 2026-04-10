@@ -1,0 +1,31 @@
+name: Full Stack Deploy immuno (Backend + Frontend)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH and Deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: |
+            # 1. Update the Repository
+            cd /home/immunization/IMMUNO
+            git pull origin main
+            npm install
+            npm run build
+	    
+            pm2 restart immuno 
+
+
+            # 3. Reload Nginx
+            
+            sudo nginx -t && sudo systemctl reload nginx         
