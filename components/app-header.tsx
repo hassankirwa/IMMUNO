@@ -147,7 +147,7 @@ export function AppHeader({ onMenuToggle, isMobileMenuOpen }: AppHeaderProps) {
           <DropdownMenuTrigger asChild>
             <Button
               variant="ghost"
-              className="flex max-w-[220px] items-center gap-2 px-2"
+              className="flex max-w-[230px] items-center gap-2 py-6 px-5"
               disabled={session.loading}
             >
               <Avatar className="h-8 w-8 shrink-0">
